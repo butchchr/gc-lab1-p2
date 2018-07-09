@@ -26,9 +26,10 @@ namespace GC_Lab_1_p2
 
             if (num1 && num2)
             {
-                var duration = d1 - d2;
-
-                Console.WriteLine(duration.ToString("dd\\:hh\\:mm"));
+                TimeSpan duration = d1 - d2;
+                string time = string.Format("There are {0} days or {1} hours or {2} minutes beween the dates you entered", duration.TotalDays, duration.TotalHours, duration.TotalMinutes);
+                
+                Console.WriteLine(time);
             }
             else
             {
